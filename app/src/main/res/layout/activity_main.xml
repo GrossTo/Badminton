@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#9fa8da"
-    android:backgroundTint="#9fa8da"
+    tools:context="gross.torben.de.badminton.MainActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:gravity="center_vertical"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#9fa8da"
+    >
 
 
-    <Button
-        android:id="@+id/btnConnect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:background="#3f51b5"
-        android:elevation="0dp"
-        android:text="Connect to Sensor"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:background="#3f51b5"
+            android:text="Connect to Sensor"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btnRecord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:background="#3f51b5"
-        android:text="Start Recording"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btnRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#3f51b5"
+            android:text="Start Recording"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btnSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-
-        android:background="#3f51b5"
-        android:text="Settings"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#3f51b5"
+            android:text="Settings"
+            android:textColor="#ffffff" />
 
 </LinearLayout>

@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Connect.ConnectActivity"></activity>
+        <activity android:name=".Record.RecordActivity"></activity>
+        <activity android:name=".Settings.SettingsActivity"></activity>
     </application>
 
 </manifest>
