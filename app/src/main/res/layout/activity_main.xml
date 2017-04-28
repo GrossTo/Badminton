@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="gross.torben.de.badminton.MainActivity"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:background="#9fa8da"
-    >
+    android:background="#9fa8da">
 
-
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="#ffffff"
+            app:subtitleTextColor="#ffffff"
+            android:background="#3f51b5" />
         <Button
             android:id="@+id/btnConnect"
             android:layout_width="match_parent"
@@ -18,6 +26,7 @@
             android:layout_gravity="center"
             android:layout_marginEnd="30dp"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="200dp"
             android:background="#3f51b5"
             android:text="Connect to Sensor"
             android:textColor="#ffffff" />

@@ -3,7 +3,9 @@ package gross.torben.de.badminton;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button connect;
     private Button record;
     private Button settings;
+    private ActionBar actionBar;
 
 
     @Override
@@ -29,6 +32,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         connect = (Button) findViewById(R.id.btnConnect);
         record = (Button) findViewById(R.id.btnRecord);
         settings = (Button) findViewById(R.id.btnSettings);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        actionBar = getSupportActionBar();
+        actionBar.setTitle("Blukii Badminton Control App");
+        actionBar.setSubtitle("Control Blukii between your badminton game");
+
 
         connect.setOnClickListener(this);
         record.setOnClickListener(this);
