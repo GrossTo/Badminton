@@ -20,6 +20,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import gross.torben.de.badminton.Connect.ConnectActivity;
+import gross.torben.de.badminton.Connect.ConnectActivity2;
+import gross.torben.de.badminton.Logger.Logger;
 import gross.torben.de.badminton.Record.RecordActivity;
 import gross.torben.de.badminton.Settings.SettingsActivity;
 
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 {
     private Button connect;
     private Button record;
+    private Logger logger;
     private Button settings;
     private Toolbar toolbar;
     private MenuItem search;
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        logger = new Logger(this.getClass().getSimpleName(), null ,"");
 
         connect = (Button) findViewById(R.id.btnConnect);
         record = (Button) findViewById(R.id.btnRecord);
@@ -77,15 +81,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v)
     {
-        Log.e(Constants.LOG, "Clicked");
+        logger.log("Clicked");
         if (v == connect)
         {
-            Log.e(Constants.LOG, "Clicked on Connect");
-            Intent intent = new Intent(this, ConnectActivity.class);
-            Log.e(Constants.LOG, "NewIntent");
+            logger.log("Clicked on Connect");
+            Intent intent = new Intent(this, ConnectActivity2.class);
+            logger.log("NewIntent");
             startActivity(intent);
 
-            Log.e(Constants.LOG, "Ausführen ConnectActivity");
+            logger.log("Ausführen ConnectActivity");
         }
         else if (v == record)
         {

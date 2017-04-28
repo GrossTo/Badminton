@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="gross.torben.de.badminton.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#9fa8da"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/tool_bar">
+
+    </include>
+
+    <Button
+        android:id="@+id/search_devices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search for Devices" />
+
+    <TextView
+        android:id="@+id/tvDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.42" />
+
+    <TextView
+        android:id="@+id/tvLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.39" />
+
 
 </LinearLayout>
