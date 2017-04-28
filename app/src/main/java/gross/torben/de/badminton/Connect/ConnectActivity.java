@@ -3,6 +3,7 @@ package gross.torben.de.badminton.Connect;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -14,7 +15,7 @@ import gross.torben.de.badminton.R;
  * Created by Torben on 04.04.2017.
  */
 
-public class ConnectActivity extends Activity
+public class ConnectActivity extends AppCompatActivity
 {
 
     @Override
