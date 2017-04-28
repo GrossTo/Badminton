@@ -1,14 +1,23 @@
 package gross.torben.de.badminton;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.AttributeSet;
 import android.util.Log;
+import android.view.InflateException;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import gross.torben.de.badminton.Connect.ConnectActivity;
 import gross.torben.de.badminton.Record.RecordActivity;
@@ -20,7 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button connect;
     private Button record;
     private Button settings;
-    private ActionBar actionBar;
+    private Toolbar toolbar;
+    private MenuItem search;
+
 
 
     @Override
@@ -32,17 +43,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         connect = (Button) findViewById(R.id.btnConnect);
         record = (Button) findViewById(R.id.btnRecord);
         settings = (Button) findViewById(R.id.btnSettings);
+        search = (MenuItem) findViewById(R.id.action_search);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        actionBar = getSupportActionBar();
-        actionBar.setTitle("Blukii Badminton Control App");
-        actionBar.setSubtitle("Control Blukii between your badminton game");
+        //myToolbar.setTitleTextColor(0xffffff);
+
 
 
         connect.setOnClickListener(this);
         record.setOnClickListener(this);
         settings.setOnClickListener(this);
         Log.e(Constants.LOG, "Created");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int id = item.getItemId();
+        if (id == R.id.action_settings)
+        {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -69,6 +98,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
     }
-
-
 }

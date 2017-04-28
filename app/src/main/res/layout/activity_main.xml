@@ -11,14 +11,12 @@
     android:orientation="vertical"
     android:background="#9fa8da">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/my_toolbar"
-            android:minHeight="?attr/actionBarSize"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:titleTextColor="#ffffff"
-            app:subtitleTextColor="#ffffff"
-            android:background="#3f51b5" />
+        <include
+                android:id="@+id/my_toolbar"
+                layout="@layout/tool_bar">
+
+        </include>
+
         <Button
             android:id="@+id/btnConnect"
             android:layout_width="match_parent"
